@@ -1,0 +1,8 @@
+stages:
+  ingest_attack_vectors:
+    cmd: python src/attack_engine/ingest.py
+    deps:
+      - data/raw/attack_vectors.csv
+      - src/attack_engine/ingest.py
+    outs:
+      - data/processed/attack_vectors.parquet

@@ -1,0 +1,19 @@
+{
+  "id": null,
+  "title": "RedMind AI Security Validation",
+  "tags": ["security", "mlops", "redmind"],
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Security Trust Score",
+      "targets": [{"expr": "redmind_security_score", "legendFormat": "{{model}}"}],
+      "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8}
+    },
+    {
+      "type": "graph",
+      "title": "Adversarial Attack Success Count",
+      "targets": [{"expr": "redmind_attack_success_total", "legendFormat": "{{category}} - {{model}}"}],
+      "gridPos": {"x": 12, "y": 0, "w": 12, "h": 8}
+    }
+  ]
+}

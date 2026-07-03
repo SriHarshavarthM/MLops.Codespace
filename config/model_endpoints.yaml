@@ -1,0 +1,13 @@
+models:
+  ollama_qwen3:
+    display_name: "Ollama Qwen 3"
+    api_model: "ollama/qwen3"
+    endpoint: "http://localhost:11434/v1/chat/completions"
+  ollama_gemma:
+    display_name: "Ollama Gemma"
+    api_model: "ollama/gemma"
+    endpoint: "http://localhost:11434/v1/chat/completions"
+  local_llama:
+    display_name: "Local Llama"
+    api_model: "llama-2"
+    endpoint: "http://localhost:11434/v1/chat/completions"
