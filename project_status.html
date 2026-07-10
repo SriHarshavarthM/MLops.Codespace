@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Status - MLops.Codespace</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; line-height: 1.6; color: #222; background: #f5f7fb; }
+    h1, h2 { color: #1e40af; }
+    .section { background: #fff; border: 1px solid #d1d5db; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }
+    ul { margin: 0.75rem 0 0 1.4rem; }
+    li { margin-bottom: 0.5rem; }
+    code { background: #e2e8f0; padding: 0.15rem 0.35rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h1>MLops.Codespace Project Status</h1>
+    <p>The project now includes a working FastAPI backend, configuration-backed model and scenario endpoints, and an interactive dashboard for running security validation workflows.</p>
+  </div>
+  <div class="section">
+    <h2>Completed Work</h2>
+    <ul>
+      <li>Integrated the validation pipeline with the backend API so requests can trigger the model attack workflow end to end.</li>
+      <li>Added health, status, model catalog, and scenario catalog endpoints for the frontend and operators.</li>
+      <li>Replaced the placeholder UI with a React dashboard that surfaces backend status, validation controls, and metrics output.</li>
+      <li>Improved dataset detection to avoid misclassifying local CSV files as Kaggle datasets.</li>
+      <li>Added regression tests for health checks, model configuration, and the core attack-engine behavior.</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>How to Use It</h2>
+    <ul>
+      <li>Start the backend with <code>uvicorn app.backend.main:app --host 0.0.0.0 --port 8000</code>.</li>
+      <li>Serve the frontend from the Vite app in <code>app/frontend</code> once Node.js is available in the environment.</li>
+      <li>Use the dashboard to run a validation job, inspect drift results, and review the Prometheus metrics snapshot.</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Current Focus</h2>
+    <ol>
+      <li>Keep the backend and validation pipeline connected to the same data sources.</li>
+      <li>Optionally wire the UI to a live model endpoint or external inference provider.</li>
+      <li>Extend monitoring with richer dashboards and alerting once the deployment environment is available.</li>
+    </ol>
+  </div>
+</body>
+</html>
